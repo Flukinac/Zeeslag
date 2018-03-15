@@ -10,6 +10,7 @@ echo $bn = $_GET['name'];
 echo $bs = $_GET['space'];
 echo $bc = $_GET['coor'];
 
+
 class bootje{
     private $name;
     private $spaces;
@@ -40,3 +41,7 @@ $conn->query($sqlRegisterBoatH3);
 $sqlRegisterBoatV ="UPDATE `coordinaten` SET `b`=1 WHERE `id`=1;
                     UPDATE `coordinaten` SET `b`=1 WHERE `id`=2;
                     UPDATE `coordinaten` SET `b`=1 WHERE `id`=3";
+
+echo "boot geregistreert";
+
+

@@ -15,7 +15,7 @@
                     document.getElementById("searchResult").innerHTML = xhttp.responseText;
                 }
                 };
-                xhttp.open("GET", "ajax.php?jojo="+co.value, true);
+                xhttp.open("GET", "Ajax.php?jojo="+co.value, true);
                 xhttp.send();
             }
             function registerBoat(){                                    //registreet een boot en zet het meer
@@ -33,11 +33,13 @@
                 xhttp.open("GET", "register.php?name="+bn+"&space="+bs+"&coor="+bc, true);
                 xhttp.send();
             }
+           
         </script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body> 
         <?php
+
             $speelZee = [
                 [0,0,0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0,0,0],
@@ -51,6 +53,7 @@
                 [0,0,0,0,0,0,0,0,0,0],
             ];
             
+
             echo "<table>";
                 for($y=0;$y<10;$y++){ 
                     echo "<tr>";
@@ -69,5 +72,9 @@
         <input type="number" id="spaces" placeholder="spaces"><br>
         <input type="text" id="place" placeholder="vul hier je coordinaten in"><br>
         <input type="button" value="register" onclick="registerBoat()">
+        
     </body>  
+
 </html>
+
+
