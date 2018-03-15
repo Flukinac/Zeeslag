@@ -16,7 +16,7 @@
                     document.getElementById("searchResult").innerHTML = xhttp.responseText;
                 }
                 };
-                xhttp.open("GET", "ajax.php?jojo="+co.value, true);
+                xhttp.open("GET", "Ajax.php?jojo="+co.value, true);
                 xhttp.send();
             }
             function registerBoat(){
@@ -30,23 +30,14 @@
                 xhttp.open("GET", "register.php", true);
                 xhttp.send();
             }
+           
         </script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <?php
-            $speelZee = [
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-            ];
+            
+            
 
             echo "<table>";
                 for($y=0;$y<10;$y++){ 
@@ -63,5 +54,11 @@
         ?>
         <div id=searchResult>Result</div>
         <input type="button" value="register" onclick="registerBoat()">
+        
     </body>  
 </html>
+
+
+
+<!--$cor = $y*10+$x;                        //maakt unieke id codes aan met de x en y as
+    echo "<td id=".$cor."><input type=button value=".$cor." onclick='search(this)'></td>";-->

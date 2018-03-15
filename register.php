@@ -10,3 +10,4 @@ $sqlRegisterBoat ="UPDATE `coordinaten` SET `a`=1,`b`=1,`c`=1 WHERE `id`=1";
 $conn->query($sqlRegisterBoat); 
 
 echo "boot geregistreert";
+
