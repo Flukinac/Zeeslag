@@ -1,4 +1,3 @@
-=
 <html>
     <head>
         <?php 
@@ -37,7 +36,7 @@
         </script>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body> 
         <?php
             $speelZee = [
                 [0,0,0,0,0,0,0,0,0,0],
@@ -51,7 +50,7 @@
                 [0,0,0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0,0,0],
             ];
-
+            
             echo "<table>";
                 for($y=0;$y<10;$y++){ 
                     echo "<tr>";
