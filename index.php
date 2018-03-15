@@ -18,7 +18,17 @@
                 };
                 xhttp.open("GET", "ajax.php?jojo="+co.value, true);
                 xhttp.send();
-                alert(co.value);
+            }
+            function registerBoat(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Typical action to be performed when the document is ready:
+                    document.getElementById("searchResult").innerHTML = xhttp.responseText;
+                }
+                };
+                xhttp.open("GET", "register.php", true);
+                xhttp.send();
             }
         </script>
         <link rel="stylesheet" href="style.css">
@@ -48,8 +58,10 @@
                     echo "</tr>";
                 }
             echo "</table>";
-            echo "<div id=searchResult>test</div>"
+            
             
         ?>
+        <div id=searchResult>Result</div>
+        <input type="button" value="register" onclick="registerBoat()">
     </body>  
 </html>

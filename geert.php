@@ -6,8 +6,7 @@ $db = "zeeslag";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $db);
  
-$sqlSelectAll = "SELECT `a`,`b`,`c`,`d`,`e`,`f`,`g`,`h`,`i`,`j` FROM `coordinaten`";
-
-$speelveld = $conn->query($sqlSelectAll); 
-
-print_r($speelveld);
+//$sqlSelectAll = "SELECT `a`,`b`,`c`,`d`,`e`,`f`,`g`,`h`,`i`,`j` FROM `coordinaten`";
+//$sqlSelectOne = "SELECT `a` FROM `coordinaten`";
+//
+//$selectone = $conn->query($sqlSelectOne);

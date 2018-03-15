@@ -2,11 +2,10 @@
 
 $cor = $_GET['jojo'];
 
-if($cor === '80'){
+if($cor === '7'){
     echo "BOEM".
           "<style>
-              #1{
-                background-color: coral;
+              #".$cor."{
               }
            </style>";
 }else{
