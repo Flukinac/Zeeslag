@@ -34,7 +34,6 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <?php
             $speelZee = [
                 [0,0,0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0,0,0],
