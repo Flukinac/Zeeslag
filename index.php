@@ -1,4 +1,3 @@
-=
 <html>
     <head>
         <?php 
@@ -8,7 +7,7 @@
             
         </style>
         <script>
-            function search(co){
+            function search(co){    // zoekt of geklikte coordinaat een boot heeft
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -19,7 +18,11 @@
                 xhttp.open("GET", "Ajax.php?jojo="+co.value, true);
                 xhttp.send();
             }
-            function registerBoat(){
+            function registerBoat(){                                    //registreet een boot en zet het meer
+                var bn = document.getElementById("name").value;         //boot naam
+                var bs = document.getElementById("spaces").value;       //boot groote
+                var bc = document.getElementById("place").value;    //boot coordinaten
+                
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -27,16 +30,28 @@
                     document.getElementById("searchResult").innerHTML = xhttp.responseText;
                 }
                 };
-                xhttp.open("GET", "register.php", true);
+                xhttp.open("GET", "register.php?name="+bn+"&space="+bs+"&coor="+bc, true);
                 xhttp.send();
             }
            
         </script>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body> 
         <?php
-            
+
+            $speelZee = [
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0],
+            ];
             
 
             echo "<table>";
@@ -53,12 +68,13 @@
             
         ?>
         <div id=searchResult>Result</div>
+        <input type="text" id="name" placeholder="name"><br>
+        <input type="number" id="spaces" placeholder="spaces"><br>
+        <input type="text" id="place" placeholder="vul hier je coordinaten in"><br>
         <input type="button" value="register" onclick="registerBoat()">
         
     </body>  
+
 </html>
 
 
-
-<!--$cor = $y*10+$x;                        //maakt unieke id codes aan met de x en y as
-    echo "<td id=".$cor."><input type=button value=".$cor." onclick='search(this)'></td>";-->
