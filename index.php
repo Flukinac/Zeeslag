@@ -60,5 +60,3 @@
 
 
 
-<!--$cor = $y*10+$x;                        //maakt unieke id codes aan met de x en y as
-    echo "<td id=".$cor."><input type=button value=".$cor." onclick='search(this)'></td>";-->

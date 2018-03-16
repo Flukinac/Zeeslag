@@ -1,28 +1,11 @@
 <?php
 
 
-$speelZee = [
-                [1,1,1,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0,0],
-            ];
-
 
 function shoot($speelZee, $cory, $corx){
-$servername = "localhost";
-$username = "root";
-$password = "";      
-$db = "zeeslag";
 $cijferNaarLetter = ["a","b","c","d","e","f","g","h","i","j"];//dit systeem kan weg als de database tabel kolom geen letters maar nummers bevat
 
-$conn = mysqli_connect($servername, $username, $password, $db);
+$conn = mysqli_connect("localhost", "root", "", "zeeslag");
 $query = "SELECT `$cijferNaarLetter[$corx]` FROM `coordinaten` WHERE ID=$cory";
 $result = $conn->query($query);
 echo $cory.$corx;
@@ -51,9 +34,6 @@ if (isset($_GET['jojo'])){
     shoot($speelZee, $cory, $corx);
 }
 
-// if($speelZee[$cory][$corx] == 1){     om uit te lezen uit de array $speelzee
-//        echo "BOEM";
-//    }else{
-//        echo "plons";
-//    }
-//}
+
+
+
