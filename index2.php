@@ -25,6 +25,7 @@ and open the template in the editor.
         <input type=button value="Maak gebruiker aan"onclick="newuser();">
         
         <hr>
+        <hr>
         
         
         <h3>Maak rekening aan</h3>
