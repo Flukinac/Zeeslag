@@ -1,6 +1,5 @@
 <?php
     include "credentials/credentials.php";
-    echo $sn;
 ?>
 
 <!DOCTYPE html>

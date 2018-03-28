@@ -2,7 +2,7 @@ function newuser(){
     var gebruiker = {};
     gebruiker.naam = document.getElementById("username").value;
     gebruiker.email = document.getElementById("email").value;
-    gebruiker.password = document.getElementById("pwd").value;
+    gebruiker.wachtwoord = document.getElementById("pwd").value;
     //alert("Nieuwe user aangemaakt");
     var xml = new XMLHttpRequest();
     xml.onreadystatechange = function (){

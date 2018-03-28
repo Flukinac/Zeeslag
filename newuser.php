@@ -2,8 +2,8 @@
     include "credentials/credentials.php";
     include "classes.php";
 
-
 $gebruiker = json_decode($_POST['gebruiker']);
-echo $gebruiker->naam;
 
+$sqlNewUser = "INSERT INTO `rsa_gebruikers`(`naam`, `email`, `wachtwoord`) VALUES ('$gebruiker->naam','$gebruiker->email','$gebruiker->wachtwoord')";
 
+$conn->query($sqlNewUser);
