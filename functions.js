@@ -8,7 +8,6 @@ function newuser(){
     xml.onreadystatechange = function (){
         if(xml.readyState === 4 && xml.status === 200){
             console.log(this.responseText);
-            console.log(xml);
         }
     };
     var userdata = JSON.stringify(gebruiker);
@@ -28,7 +27,6 @@ function newrekening(){
     xml.onreadystatechange = function (){
         if(xml.readyState === 4 && xml.status === 200){
             console.log(this.responseText);
-            console.log(xml);
         }
     };
     var rekeningdata = JSON.stringify(rekening);
@@ -48,7 +46,6 @@ function newtransactie(){
     xml.onreadystatechange = function (){
         if(xml.readyState === 4 && xml.status === 200){
             console.log(this.responseText);
-            console.log(xml);
         }
     };
     var transactiedata = JSON.stringify(transactie);

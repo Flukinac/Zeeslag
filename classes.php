@@ -1,5 +1,5 @@
 <?php
-    include "credentials.php";
+    include "credentials/credentials.php";
     
     class Bank {
         public $naam;
