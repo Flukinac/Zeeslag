@@ -1,6 +1,5 @@
 <?php
-//    include "credentials.php";
-  
+    include "credentials/credentials.php";
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +40,7 @@ and open the template in the editor.
         <input type=text id=ontvanger name=ontvanger placeholder="Rekeningnummer ontvanger">
         <input type=text id=verzender name=verzender placeholder="Rekeningnummer verzender">
         <input type=text id=bedrag name=bedrag placeholder=Bedrag>
-        <input type=button value="Maak gebruiker aan"onclick="newtransactie();">
+        <input type=button value="Maak transactie aan"onclick="newtransactie();">
         
         
         

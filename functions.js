@@ -2,13 +2,12 @@ function newuser(){
     var gebruiker = {};
     gebruiker.naam = document.getElementById("username").value;
     gebruiker.email = document.getElementById("email").value;
-    gebruiker.password = document.getElementById("pwd").value;
+    gebruiker.wachtwoord = document.getElementById("pwd").value;
     //alert("Nieuwe user aangemaakt");
     var xml = new XMLHttpRequest();
     xml.onreadystatechange = function (){
         if(xml.readyState === 4 && xml.status === 200){
             console.log(this.responseText);
-            console.log(xml);
         }
     };
     var userdata = JSON.stringify(gebruiker);
@@ -28,7 +27,6 @@ function newrekening(){
     xml.onreadystatechange = function (){
         if(xml.readyState === 4 && xml.status === 200){
             console.log(this.responseText);
-            console.log(xml);
         }
     };
     var rekeningdata = JSON.stringify(rekening);
@@ -48,7 +46,6 @@ function newtransactie(){
     xml.onreadystatechange = function (){
         if(xml.readyState === 4 && xml.status === 200){
             console.log(this.responseText);
-            console.log(xml);
         }
     };
     var transactiedata = JSON.stringify(transactie);
