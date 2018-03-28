@@ -41,6 +41,7 @@ and open the template in the editor.
         <input type=text id=ontvanger name=ontvanger placeholder="Rekeningnummer ontvanger"><br>
         <input type=text id=verzender name=verzender placeholder="Rekeningnummer verzender"><br>
         <input type=text id=bedrag name=bedrag placeholder=Bedrag><br>
+        <input type=text id=opmerking name=opmerking placeholder=Opmerking><br>
         <input type=button value="Maak transactie aan"onclick="newtransactie();"><br>
         
         
