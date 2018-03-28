@@ -5,6 +5,7 @@ function newuser(){
     gebruiker.naam = document.getElementById("username").value;
     gebruiker.email = document.getElementById("email").value;
     gebruiker.wachtwoord = document.getElementById("pwd").value;
+    gebruiker.rechten = document.getElementById("rechten").value;
     //alert("Nieuwe user aangemaakt");
 
     var xml = new XMLHttpRequest();
@@ -48,6 +49,7 @@ function newtransactie(){
     transactie.bedrag = document.getElementById("bedrag").value;
     transactie.rekeningOntvanger = document.getElementById("ontvanger").value;
     transactie.rekeningVerzender = document.getElementById("verzender").value;
+    transactie.opmerking = document.getElementById("opmerking").value;
     //alert("Nieuwe user aangemaakt");
     var xml = new XMLHttpRequest();
     xml.onreadystatechange = function (){
