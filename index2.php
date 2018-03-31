@@ -1,5 +1,5 @@
 <?php
-    include "credentials/credentials.php";
+    include "credentials.php";
 ?>
 
 <!DOCTYPE html>
@@ -13,27 +13,28 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
         <script src="functions.js"></script>
+        <link rel="stylesheet" type="text/css" href="cssFrontPage.css">
     </head>
-    <body>
-        <h1>RSA Bank</h1>
-        
-        <h3>Maak gebruiker aan</h3>
-        <input type=text id=username name=username placeholder=Gebruikersnaam><br>
-        <input type=text id=email name=email placeholder=Email><br>
-        <input type=password id=pwd name=pwd placeholder=Wachtwoord><br>
-        <input type=text id=rechten name=rechten placeholder=Rechten><br>
-        <input type=button value="Maak gebruiker aan"onclick="newuser();"><br>
-        
+    <body class="body">
+        <div class="titelDiv"><h1 class="titel">RSA Bank</h1></div>
+        <div class="SignUp">
+            <span class="aanmeldTitel"><h3>Maak gebruiker aan</h3></span>
+            <input class="signUpText" size=50  type=text id=username name=username placeholder=Gebruikersnaam><br>
+            <input class="signUpText" size=50 type=text id=email name=email placeholder=Email><br>
+            <input class="signUpText" size=51  type=password id=pwd name=pwd placeholder=Wachtwoord><br>
+            <input class="signUpText" size=50 type=text id=rechten name=rechten placeholder=Rechten><br>
+            <input class="signUpText" type=button value="Maak gebruiker aan"onclick="newuser();"><br>
+        </div>
         <hr>
         <hr>
         
-        
-        <h3>Maak rekening aan</h3>
-        <input type=text id=rekeningnr name=rekeningnr placeholder=Rekeningnummer><br>
-        <input type=text id=saldo name=saldo placeholder=Saldo><br>
-        <input type=password id=pincode name=pincode placeholder=Pincode><br>
-        <input type=button value="Maak rekening aan"onclick="newrekening();"><br>
-        
+        <div class="maakRekeningDiv">
+            <span class="aanmeldTitel"<h3>Maak rekening aan</h3><br>
+            <input type=text size=50 id=rekeningnr name=rekeningnr placeholder=Rekeningnummer><br>
+            <input type=text size=50 id=saldo name=saldo placeholder=Saldo><br>
+            <input type=password size=51 id=pincode name=pincode placeholder=Pincode><br>
+            <input type=button value="Maak rekening aan"onclick="newrekening();"><br>
+        </div>
         <hr>
         
         
