@@ -16,7 +16,7 @@ and open the template in the editor.
     <body>
         <?php
         $conn = createconnection();
-        echo "heloo world";
+        echo "helooo world";
         ?>
     </body>
 </html>
