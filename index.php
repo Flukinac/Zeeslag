@@ -13,17 +13,24 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
         <script src="functions.js"></script>
+        <script src="jquery.js"></script>
         <link rel="stylesheet" type="text/css" href="cssFrontPage.css">
     </head>
     <body class="body">
-        <div class="titelDiv"><h1>RSA Bank</h1></div>
+        <div class="titelDiv"><h1>RSA Bank</h1>
+            <form action="login.php" method="POST">       
+                    <input type=input name=uid id=gbnaam placeholder="gebruikersnaam/email">
+                    <input type=password name=pwd id=wachtw placeholder="wachtwoord">
+                    <input type=submit value=login class=buttonLoginCss id=Login>
+            </form>
+        </div>
         <div class="SignUpDiv">
             <span class="aanmeldTitel"><h3>Maak gebruiker aan</h3></span>
             <input class="signUpText" size=30  type=text id=username name=username placeholder=Gebruikersnaam><br>
             <input class="signUpText" size=30 type=text id=email name=email placeholder=Email><br>
             <input class="signUpText" size=30  type=password id=pwd name=pwd placeholder=Wachtwoord><br>
             <input class="signUpText" size=30 type=text id=rechten name=rechten placeholder=Rechten><br><br>
-            <input class="buttonCss" type=button value="Maak gebruiker aan" onclick="newuser();"><br>
+            <input class="buttonCss" id=User type=button value="Maak gebruiker aan" onclick="newuser();"><br>
         </div>
        
         
@@ -38,11 +45,11 @@ and open the template in the editor.
         
         <div class="transactieDiv">
             <span class="transactieTitel"><h3 >Maak transactie</h3></span>
-        <input type=text size=30 id=ontvanger name=ontvanger placeholder="Rekeningnummer ontvanger"><br>
-        <input type=text size=30 id=verzender name=verzender placeholder="Rekeningnummer verzender"><br>
-        <input type=text size=30 id=bedrag name=bedrag placeholder=Bedrag><br>
-        <input type=text size=30 id=opmerking name=opmerking placeholder=Opmerking><br><br>
-        <input type=button class="buttonCss" value="Maak transactie aan" onclick="newtransactie();"><br>
+            <input type=text size=30 id=ontvanger name=ontvanger placeholder="Rekeningnummer ontvanger"><br>
+            <input type=text size=30 id=verzender name=verzender placeholder="Rekeningnummer verzender"><br>
+            <input type=text size=30 id=bedrag name=bedrag placeholder=Bedrag><br>
+            <input type=text size=30 id=opmerking name=opmerking placeholder=Opmerking><br><br>
+            <input type=button class="buttonCss" value="Maak transactie aan" onclick="newtransactie();"><br>
         </div>
   
     </body>

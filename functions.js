@@ -1,4 +1,5 @@
 
+
 function newuser(){
 
     var gebruiker = {};
@@ -61,4 +62,11 @@ function newtransactie(){
     xml.open("POST", "newtransactie.php", true);
     xml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xml.send("transactie="+transactiedata);
+}
+function hide(){
+    $(".SignUpDiv").attr("hidden",true);  
+}
+
+function unhide(){
+    $(".SignUpDiv").attr("hidden",false);  
 }
