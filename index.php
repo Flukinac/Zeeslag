@@ -1,5 +1,6 @@
 <?php
-    include "credentials.php";
+    include "credentials/credentials.php";
+    
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +14,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
         <script src="functions.js"></script>
+        <script src="jquery.js"></script>
         <link rel="stylesheet" type="text/css" href="cssFrontPage.css">
     </head>
     <body class="body">
