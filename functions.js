@@ -2,10 +2,10 @@
 function newuser(){
 
     var gebruiker = {};
-    gebruiker.naam = document.getElementById("username").value;
-    gebruiker.email = document.getElementById("email").value;
-    gebruiker.wachtwoord = document.getElementById("pwd").value;
-    gebruiker.rechten = document.getElementById("rechten").value;
+    gebruiker.naam = $("#username").val();
+    gebruiker.email = $("#email").val();
+    gebruiker.wachtwoord = $("#pwd").val();
+    gebruiker.rechten = $("#rechten").val();
     //alert("Nieuwe user aangemaakt");
 
     var xml = new XMLHttpRequest();
@@ -27,9 +27,9 @@ function newuser(){
 
 function newrekening(){
     var rekening = {};
-    rekening.rekeningNummer = document.getElementById("rekeningnr").value;
-    rekening.saldo = document.getElementById("saldo").value;
-    rekening.pincode = document.getElementById("pincode").value;
+    rekening.rekeningNummer = $("#rekeningnr").val();
+    rekening.saldo = $("#saldo").val();
+    rekening.pincode = $("#pincode").val();
     //alert("Nieuwe user aangemaakt");
     var xml = new XMLHttpRequest();
     xml.onreadystatechange = function (){
@@ -46,10 +46,10 @@ function newrekening(){
 
 function newtransactie(){
         var transactie = {};
-    transactie.bedrag = document.getElementById("bedrag").value;
-    transactie.rekeningOntvanger = document.getElementById("ontvanger").value;
-    transactie.rekeningVerzender = document.getElementById("verzender").value;
-    transactie.opmerking = document.getElementById("opmerking").value;
+    transactie.bedrag = $("#invoer").val();
+    transactie.rekeningOntvanger = $("#invoer").val();
+    transactie.rekeningVerzender = $("#invoer").val();
+    transactie.opmerking = $("#invoer").val();
     //alert("Nieuwe user aangemaakt");
     var xml = new XMLHttpRequest();
     xml.onreadystatechange = function (){
