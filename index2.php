@@ -23,8 +23,7 @@ and open the template in the editor.
         <input type=password id=pwd name=pwd placeholder=Wachtwoord><br>
         <input type=text id=rechten name=rechten placeholder=Rechten><br>
         <input type=button value="Maak gebruiker aan"onclick="newuser();"><br>
-        
-        <hr>
+
         <hr>
         
         

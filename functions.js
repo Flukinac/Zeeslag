@@ -1,6 +1,5 @@
 
 function newuser(){
-
     var gebruiker = {};
     gebruiker.naam = document.getElementById("username").value;
     gebruiker.email = document.getElementById("email").value;
@@ -30,7 +29,7 @@ function newrekening(){
     rekening.rekeningNummer = document.getElementById("rekeningnr").value;
     rekening.saldo = document.getElementById("saldo").value;
     rekening.pincode = document.getElementById("pincode").value;
-    //alert("Nieuwe user aangemaakt");
+    //alert("Nieuwe rekening aangemaakt");
     var xml = new XMLHttpRequest();
     xml.onreadystatechange = function (){
         if(xml.readyState === 4 && xml.status === 200){
@@ -50,7 +49,7 @@ function newtransactie(){
     transactie.rekeningOntvanger = document.getElementById("ontvanger").value;
     transactie.rekeningVerzender = document.getElementById("verzender").value;
     transactie.opmerking = document.getElementById("opmerking").value;
-    //alert("Nieuwe user aangemaakt");
+    //alert("Nieuwe transactie aangemaakt");
     var xml = new XMLHttpRequest();
     xml.onreadystatechange = function (){
         if(xml.readyState === 4 && xml.status === 200){
