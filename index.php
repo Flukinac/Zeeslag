@@ -1,6 +1,12 @@
 <?php
+    session_start();
     include "credentials.php";
     
+    if(isset($_SESSION['master'])){
+        $hide = " ";
+    }else{
+        $hide = "hidden";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +31,7 @@ and open the template in the editor.
                     <input type=submit value=login class=buttonLoginCss id=Login>
             </form>
         </div>
-        <div class="SignUpDiv" hidden >
+        <div class="SignUpDiv" <?php echo $hide ?>>
             
             <span class="aanmeldTitel"><h3>Maak gebruiker aan</h3></span>
             <input class="signUpText" size=30  type=text id=username name=username placeholder=Gebruikersnaam><br>
