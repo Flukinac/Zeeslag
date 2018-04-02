@@ -1,5 +1,6 @@
 <?php
     include "credentials.php";
+    
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +25,8 @@ and open the template in the editor.
                     <input type=submit value=login class=buttonLoginCss id=Login>
             </form>
         </div>
-        <div class="SignUpDiv">
+        <div class="SignUpDiv" hidden >
+            
             <span class="aanmeldTitel"><h3>Maak gebruiker aan</h3></span>
             <input class="signUpText" size=30  type=text id=username name=username placeholder=Gebruikersnaam><br>
             <input class="signUpText" size=30 type=text id=email name=email placeholder=Email><br>
@@ -67,3 +69,5 @@ and open the template in the editor.
         </footer>
  
 </html>
+
+

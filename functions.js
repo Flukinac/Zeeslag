@@ -63,10 +63,7 @@ function newtransactie(){
     xml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xml.send("transactie="+transactiedata);
 }
+
 function hide(){
     $(".SignUpDiv").attr("hidden",true);  
-}
-
-function unhide(){
-    $(".SignUpDiv").attr("hidden",false);  
 }
