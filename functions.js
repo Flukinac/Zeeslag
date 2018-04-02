@@ -1,4 +1,5 @@
 
+
 function newuser(){
     var gebruiker = {};
     gebruiker.naam = $("#username").val();
@@ -63,4 +64,8 @@ function newtransactie(){
     xml.send("transactie="+transactiedata);
     alert("Nieuwe transactie aangemaakt");
     document.location="index.php";
+}
+
+function hide(){
+    $(".SignUpDiv").attr("hidden",true);  
 }
