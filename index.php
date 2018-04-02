@@ -1,16 +1,19 @@
 <?php
     session_start();
     include "credentials.php";
+    $login = "hidden";
     $hideLogin = " ";
-    if(isset($_SESSION['master'])){
+    if(isset($_SESSION['master'])){         //user ingelogd
         $hideMaster = "hidden";
         $hideLogin = "hidden";
-    }else{
+        $login = " ";
+    }else{                                  //niet ingelogd
         $hideMaster = "hidden";
         }
-    if(isset($_SESSION['master']) && $_SESSION['master'] == 'true'){
+    if(isset($_SESSION['master']) && $_SESSION['master'] == 'true'){    //admin ingelogd
         $hideMaster = " ";
         $hideLogin = "hidden";
+        $login = " ";
     }
 ?>
 
@@ -31,14 +34,14 @@ and open the template in the editor.
     <body class="body">
         <div class="titelDiv"><h1>RSA Bank</h1>
             <div class='loginDiv' <?php echo $hideLogin ?>>
-                <form action="login.php" method="POST">       
+                <form class="loginForm" action="login.php" method="POST">       
                     <input type=input name=uid id=gbnaam placeholder="gebruikersnaam/email">
                     <input type=password name=pwd id=wachtw placeholder="wachtwoord">
                     <input type=submit value=login class=buttonLoginCss id=Login>
                 </form>
             </div>
         </div>
-            <div class='welkom' <?php echo $hideLogin ?>><h2>U bent ingelogd</h2></div>
+            <div class='welkom' <?php echo $login ?>><h2>U bent ingelogd</h2></div>
         <div class="SignUpDiv" <?php echo $hideMaster ?>>
             
             <span class="aanmeldTitel"><h3>Maak gebruiker aan</h3></span>
@@ -70,6 +73,7 @@ and open the template in the editor.
   
     </body>
         <footer>
+            <div class='PoweredByDiv'><h1>Powered By</h1></div>
             <div class="logos">
                 <table class="tableLogos">
                     <td><img src="img/php2.jpg" height="100px"></td>
