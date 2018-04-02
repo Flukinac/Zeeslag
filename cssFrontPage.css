@@ -9,13 +9,12 @@
     
 }
 
-
 .body{
     text-decoration: none;
-    background-image: url('img/finance.jpg');
-    background-repeat: no-repeat;
+    background: url('img/finance.jpg') fixed no-repeat;
     background-position: center;
     background-size: cover;
+    margin: 0;
     height: 100%;    
 }    
 .SignUpDiv{
@@ -24,6 +23,7 @@
     height: 300px;
     border-radius: 15px;
     transform: translate(0%,10%);
+    position: fixed;
     padding: 30px 30px;
     text-align: center;
     
@@ -44,6 +44,7 @@
     width: 300px;
     height: 300px;
     transform: translate(600px,80px);
+    position: fixed;
     border-radius: 15px;
     padding: 30px 30px;
     text-align: center;
@@ -148,7 +149,7 @@
 }
 .logos{
     width: 100%;
-    transform: translate(15%,80%);
+    transform: translate(0px, 500px);
     height: 100px;
 }
 .tableLogos{
