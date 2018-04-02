@@ -1,11 +1,16 @@
 <?php
     session_start();
     include "credentials.php";
-    
+    $hideLogin = " ";
     if(isset($_SESSION['master'])){
-        $hide = " ";
+        $hideMaster = "hidden";
+        $hideLogin = "hidden";
     }else{
-        $hide = "hidden";
+        $hideMaster = "hidden";
+        }
+    if(isset($_SESSION['master']) && $_SESSION['master'] == 'true'){
+        $hideMaster = " ";
+        $hideLogin = "hidden";
     }
 ?>
 
@@ -25,13 +30,16 @@ and open the template in the editor.
     </head>
     <body class="body">
         <div class="titelDiv"><h1>RSA Bank</h1>
-            <form action="login.php" method="POST">       
+            <div class='loginDiv' <?php echo $hideLogin ?>>
+                <form action="login.php" method="POST">       
                     <input type=input name=uid id=gbnaam placeholder="gebruikersnaam/email">
                     <input type=password name=pwd id=wachtw placeholder="wachtwoord">
                     <input type=submit value=login class=buttonLoginCss id=Login>
-            </form>
+                </form>
+            </div>
         </div>
-        <div class="SignUpDiv" <?php echo $hide ?>>
+            <div class='welkom' <?php echo $hideLogin ?>><h2>U bent ingelogd</h2></div>
+        <div class="SignUpDiv" <?php echo $hideMaster ?>>
             
             <span class="aanmeldTitel"><h3>Maak gebruiker aan</h3></span>
             <input class="signUpText" size=30  type=text id=username name=username placeholder=Gebruikersnaam><br>
