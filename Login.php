@@ -1,8 +1,8 @@
-<script type="text/javascript" src="functions.js"></script>
 <?php
 session_start();
 
 include 'credentials.php';
+include 'functions.php';
 
 
 if(empty($_POST['uid']) || empty($_POST['pwd'])){

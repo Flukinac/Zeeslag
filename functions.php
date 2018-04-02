@@ -1,3 +1,11 @@
+<?php
+
+    include "credentials/credentials.php";
+    
+?>
+
+<script>
+    
 function newuser(){
     var gebruiker = {};
     gebruiker.naam = $("#username").val();
@@ -54,16 +62,19 @@ function newtransactie(){
     xml.onreadystatechange = function (){
         if(xml.readyState === 4 && xml.status === 200){
             console.log(this.responseText);
+            alert(this.responseText);
         }
     };
+    
     var transactiedata = JSON.stringify(transactie);
     xml.open("POST", "newtransactie.php", true);
     xml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xml.send("transactie="+transactiedata);
-    alert("Nieuwe transactie aangemaakt");
     document.location="index.php";
 }
 
 function hide(){
     $(".SignUpDiv").attr("hidden",true);  
 }
+
+</script>

@@ -1,6 +1,7 @@
 <?php
 
     include "credentials/credentials.php";
+    
     session_start();
     
     $login = "hidden";
@@ -30,7 +31,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
-        <script src="functions.js"></script>
+        <?php include "functions.php"?>
         <script src="jquery.js"></script>
         <link rel="stylesheet" type="text/css" href="cssFrontPage.css">
     </head>
@@ -71,6 +72,7 @@ and open the template in the editor.
             <input type=text size=30 id=verzender name=verzender placeholder="Rekeningnummer verzender"><br>
             <input type=text size=30 id=bedrag name=bedrag placeholder=Bedrag><br>
             <input type=text size=30 id=opmerking name=opmerking placeholder=Opmerking><br><br>
+            <!--<input type=password size=30 id=pincode name=pincode placeholder=Pincode><br><br>-->
             <input type=button class="buttonCss" value="Maak transactie aan" onclick="newtransactie();"><br>
         </div>
   

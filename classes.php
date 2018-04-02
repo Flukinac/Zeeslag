@@ -68,12 +68,14 @@
         public $rekeningOntvanger;
         public $rekeningVerzender;
         public $opmerking;
+        public $pincode;
         
         function __construct($bedrag, $rekeningOntvanger, $rekeningVerzender, $opmerking) {
             $this->bedrag = $bedrag;
             $this->rekeningOntvanger = $rekeningOntvanger;
             $this->rekeningVerzender = $rekeningVerzender;
             $this->opmerking = $opmerking;
+            $this->pincode = $pincode;
         }
         
         function overSchrijven(){
