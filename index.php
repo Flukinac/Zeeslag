@@ -1,6 +1,8 @@
 <?php
+
+    include "credentials/credentials.php";
     session_start();
-    include "credentials.php";
+    
     $login = "hidden";
     $hideLogin = " ";
     if(isset($_SESSION['master'])){         //user ingelogd
@@ -15,6 +17,7 @@
         $hideLogin = "hidden";
         $login = " ";
     }
+
 ?>
 
 <!DOCTYPE html>
