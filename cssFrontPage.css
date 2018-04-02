@@ -148,7 +148,7 @@
 	top:1px;
 }
 .PoweredByDiv{
-    transform: translate(0px, 500px);
+    transform: translate(0px, 520px);
     font-family: Arial;
     font-weight: bolder;
     text-align: center;
@@ -157,7 +157,7 @@
 }
 .logos{
     width: 100%;
-    transform: translate(250px, 500px);
+    transform: translate(250px, 520px);
     height: 100px;
 }
 
@@ -172,6 +172,11 @@
     height: 50px;
     width: 100%;
 }
-.loginForm{
-    
+.welkom{
+    background-color: rgba(55,175,247,0.5);
+    font-family: Arial;
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
+    height: 50px; 
 }

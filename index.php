@@ -34,7 +34,7 @@ and open the template in the editor.
     <body class="body">
         <div class="titelDiv"><h1>RSA Bank</h1>
             <div class='loginDiv' <?php echo $hideLogin ?>>
-                <form class="loginForm" action="login.php" method="POST">       
+                <form action="login.php" method="POST">       
                     <input type=input name=uid id=gbnaam placeholder="gebruikersnaam/email">
                     <input type=password name=pwd id=wachtw placeholder="wachtwoord">
                     <input type=submit value=login class=buttonLoginCss id=Login>
